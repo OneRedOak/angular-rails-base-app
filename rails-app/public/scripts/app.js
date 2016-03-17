@@ -8,6 +8,9 @@ angular
 	])
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider
+			.when('/post/:id', {
+				templateUrl: 'views/post.html'
+			})
 			.otherwise({
 				templateUrl: 'views/home.html'
 			})

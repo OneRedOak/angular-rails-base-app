@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160315190941) do
+ActiveRecord::Schema.define(version: 20160316222238) do
+
+  create_table "comments", force: true do |t|
+    t.integer "post_id"
+    t.integer "comment_id"
+    t.string  "user"
+    t.text    "text"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string "title"
+    t.string "link"
+    t.text   "text"
+  end
 
   create_table "tests", force: true do |t|
     t.string   "text"
